@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1017</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButtonSalt">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>80</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Salt</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>431</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Source image</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>311</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>10</y>
+      <width>421</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Processed image</string>
+    </property>
+    <widget class="QLabel" name="label_dest">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>341</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxSlatNum">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>81</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Salt number</string>
+    </property>
+    <property name="maximum">
+     <number>10000</number>
+    </property>
+    <property name="singleStep">
+     <number>50</number>
+    </property>
+    <property name="value">
+     <number>3000</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonColorReduction">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>510</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Color reduction</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonGrabImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Grab image</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1017</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuModifica">
+    <property name="title">
+     <string>Modifica</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTransformation">
+    <property name="title">
+     <string>Transformation</string>
+    </property>
+    <widget class="QMenu" name="menuFilters">
+     <property name="title">
+      <string>Filters</string>
+     </property>
+     <addaction name="actionLow_pass_filter"/>
+     <addaction name="actionMedian_filter"/>
+     <addaction name="actionLaplacian_filter"/>
+    </widget>
+    <widget class="QMenu" name="menuMorphological_operations">
+     <property name="title">
+      <string>Morphological operations</string>
+     </property>
+     <addaction name="actionErosion"/>
+     <addaction name="actionDilation"/>
+     <addaction name="actionOpening"/>
+     <addaction name="actionClosing"/>
+     <addaction name="actionGrabCut_algorithm"/>
+    </widget>
+    <addaction name="menuMorphological_operations"/>
+    <addaction name="menuFilters"/>
+    <addaction name="actionExtracting_features"/>
+    <addaction name="actionVari"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuModifica"/>
+   <addaction name="menuTransformation"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionExtracting_features">
+   <property name="text">
+    <string>Extracting features</string>
+   </property>
+  </action>
+  <action name="actionLow_pass_filter">
+   <property name="text">
+    <string>Low pass filter</string>
+   </property>
+  </action>
+  <action name="actionMedian_filter">
+   <property name="text">
+    <string>Median filter</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_filter">
+   <property name="text">
+    <string>Laplacian filter</string>
+   </property>
+  </action>
+  <action name="actionErosion">
+   <property name="text">
+    <string>Erosion</string>
+   </property>
+  </action>
+  <action name="actionDilation">
+   <property name="text">
+    <string>Dilation</string>
+   </property>
+  </action>
+  <action name="actionOpening">
+   <property name="text">
+    <string>Opening</string>
+   </property>
+  </action>
+  <action name="actionClosing">
+   <property name="text">
+    <string>Closing</string>
+   </property>
+  </action>
+  <action name="actionGrabCut_algorithm">
+   <property name="text">
+    <string>GrabCut algorithm</string>
+   </property>
+  </action>
+  <action name="actionVari">
+   <property name="text">
+    <string>Vari</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
